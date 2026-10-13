@@ -11,6 +11,9 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
   transition: background-color var(--transition-duration);
 
   &:focus-visible {
@@ -28,6 +31,7 @@
 
     &:active {
       background-color: var(--color-green-active);
+      transition: none;
     }
   }
 
