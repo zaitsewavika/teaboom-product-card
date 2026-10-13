@@ -1,0 +1,15 @@
+{
+  "name": "teaboom-product-card",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:css": "sass assets/css/styles.scss assets/css/styles.css --no-source-map --style=expanded",
+    "watch:css": "sass --watch assets/css/styles.scss:assets/css/styles.css --no-source-map --style=expanded",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "3.9.10",
+    "sass": "1.105.1"
+  }
+}

@@ -1,0 +1,57 @@
+@use '../media';
+
+.breadcrumbs {
+  margin-bottom: 16px;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  line-height: 18px;
+
+  @include media.tablet {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: baseline;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  &__item + &__item::before {
+    content: '/';
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+
+  &__link,
+  &__current {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  &__link {
+    transition: color var(--transition-duration);
+
+    @include media.hover {
+      color: var(--color-text);
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-focus);
+      outline-offset: 4px;
+    }
+  }
+
+  &__current {
+    color: var(--color-text);
+  }
+}

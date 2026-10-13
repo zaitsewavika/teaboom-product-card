@@ -1,0 +1,16 @@
+# Установленные зависимости
+node_modules/
+
+# Результат сборки: его форматирует Sass
+assets/css/styles.css
+*.css.map
+dist/
+coverage/
+
+# Материалы макета и сторонние файлы
+design/
+assets/fonts/
+assets/images/
+
+# Lock-файл поддерживается пакетным менеджером
+package-lock.json

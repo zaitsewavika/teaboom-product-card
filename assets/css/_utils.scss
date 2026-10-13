@@ -1,0 +1,32 @@
+@use 'media';
+
+.container {
+  width: 100%;
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+  padding-block: 24px;
+
+  @include media.tablet {
+    --container-padding-x: 24px;
+    padding-block: 32px;
+  }
+
+  @include media.desktop {
+    --container-padding-x: 32px;
+    padding-block: 64px;
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}

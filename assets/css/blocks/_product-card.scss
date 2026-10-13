@@ -1,0 +1,123 @@
+@use '../media';
+@use '../mixins';
+
+.product-card {
+  padding: var(--card-padding);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface);
+  box-shadow: 0 4px 24px var(--color-shadow);
+
+  @include media.tablet {
+    --card-padding: 24px;
+  }
+
+  @include media.desktop {
+    --card-padding: 40px;
+  }
+
+  &__heading {
+    margin-bottom: 24px;
+
+    @include media.desktop {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__title {
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: 700;
+
+    @include media.tablet {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    @include media.desktop {
+      font-size: 36px;
+      line-height: 48px;
+    }
+  }
+
+  &__category {
+    margin-top: 8px;
+    color: var(--color-text-muted);
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__body {
+    @include mixins.grid-col(1);
+    align-items: start;
+    gap: 24px;
+
+    @include media.tablet {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px;
+    }
+
+    @include media.desktop {
+      gap: 64px;
+    }
+  }
+
+  &__media,
+  &__info {
+    min-width: 0;
+  }
+
+  &__image {
+    @include mixins.square(100%);
+    object-fit: contain;
+  }
+
+  &__description {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--color-border);
+
+    &-title {
+      margin-bottom: 12px;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 700;
+
+      @include media.desktop {
+        font-size: 20px;
+      }
+    }
+
+    &-text {
+      color: var(--color-text-muted);
+      overflow-wrap: anywhere;
+
+      @include media.desktop {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  &__variant {
+    margin-top: 12px;
+  }
+
+  &__article-number {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  &__cart {
+    width: 100%;
+    margin-top: 24px;
+
+    @include media.desktop {
+      width: min(100%, 360px);
+    }
+  }
+}

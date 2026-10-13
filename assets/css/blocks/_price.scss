@@ -1,0 +1,39 @@
+@use '../media';
+
+.price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 16px;
+  min-height: 48px;
+
+  &__current {
+    color: var(--color-text);
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    white-space: nowrap;
+
+    @include media.desktop {
+      font-size: 40px;
+    }
+
+    &--discount {
+      color: var(--color-accent);
+    }
+  }
+
+  &__old {
+    color: var(--color-price-old);
+    font-size: 16px;
+    line-height: 24px;
+    white-space: nowrap;
+  }
+
+  &__caption {
+    margin-top: 4px;
+    color: var(--color-text-muted);
+    font-size: 13px;
+    line-height: 20px;
+  }
+}

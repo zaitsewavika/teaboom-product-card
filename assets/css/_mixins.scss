@@ -1,0 +1,26 @@
+@mixin reset-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+@mixin flex-center($is-inline: false) {
+  @if $is-inline {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin square($size) {
+  width: $size;
+  aspect-ratio: 1;
+}
+
+@mixin grid-col($col) {
+  display: grid;
+  grid-template-columns: repeat($col, minmax(0, 1fr));
+}

@@ -1,0 +1,41 @@
+:root {
+  /* Фон и подложка */
+  --color-background: #fbfbfb;
+  --color-surface: #ffffff;
+
+  /* Текст */
+  --color-text: #202020;
+  --color-text-muted: #666666;
+  --color-price-old: #737780;
+  --color-accent: #e00000;
+
+  /* Границы и разделители */
+  --color-border: #e5e7eb;
+  --color-focus: #202020;
+
+  /* Кнопка покупки */
+  --color-green: #e9f2c3;
+  --color-green-hover: #dce8ad;
+  --color-green-active: #cedb97;
+  --color-button-text: #202020;
+
+  /* Выбор фасовки */
+  --color-option: #fafafa;
+  --color-option-hover: #f3f3f3;
+  --color-option-selected: #fff4c2;
+  --color-option-selected-border: #b87900;
+
+  /* Тень подложки */
+  --color-shadow: #2020200a;
+
+  --font-family-base: 'Open Sans', Arial, sans-serif;
+
+  --container-width: 1200px;
+  --container-padding-x: 16px;
+  --card-padding: 20px;
+
+  --radius-card: 8px;
+  --radius-control: 4px;
+
+  --transition-duration: 150ms;
+}

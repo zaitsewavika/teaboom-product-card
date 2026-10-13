@@ -1,0 +1,59 @@
+@use '../media';
+@use '../mixins';
+
+.packaging {
+  &__legend {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+
+  &__options {
+    @include mixins.grid-col(2);
+    gap: 8px;
+
+    @include media.tablet {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  &__option {
+    min-width: 0;
+  }
+
+  &__label {
+    @include mixins.flex-center;
+    min-height: 48px;
+    padding: 10px 4px;
+    // Граница зарезервирована, чтобы выбранное состояние не меняло размеры.
+    border: 2px solid transparent;
+    border-radius: var(--radius-control);
+    background-color: var(--color-option);
+    box-shadow: inset 0 0 0 1px var(--color-border);
+    font-size: 16px;
+    line-height: 24px;
+    white-space: nowrap;
+    transition:
+      background-color var(--transition-duration),
+      border-color var(--transition-duration);
+
+    @include media.hover {
+      background-color: var(--color-option-hover);
+    }
+  }
+
+  &__input:checked + &__label {
+    border-color: var(--color-option-selected-border);
+    background-color: var(--color-option-selected);
+    box-shadow: none;
+    font-weight: 700;
+  }
+
+  &__input:focus-visible + &__label {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 4px;
+  }
+}
